@@ -40,7 +40,7 @@ Prever se o preço de um ativo (ex: BTC/USDT) irá subir ou cair na próxima jan
 
 ### 1. Treinamento do Modelo
 
-> Requer Python 3.11+
+> Requer Python 3.10.11+
 
 Execute o script `Ai_v3.py`:
 
