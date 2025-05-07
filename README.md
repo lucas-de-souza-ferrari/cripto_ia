@@ -31,7 +31,7 @@ Prever se o preço de um ativo (ex: BTC/USDT) irá subir ou cair na próxima jan
 ```
 ├── mongo.py           # Conexão com o MongoDB Atlas e coleta de candles
 ├── Ai_v3.py           # Processamento de dados e treinamento do modelo
-├── test_model.py      # Aplicação do modelo para prever o próximo movimento
+├── test/test_model.py      # Aplicação do modelo para prever o próximo movimento
 ├── model/             # Modelos treinados (.pkl)
 ├── scaler/            # Scalers salvos (.pkl)
 ```
