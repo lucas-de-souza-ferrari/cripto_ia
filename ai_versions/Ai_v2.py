@@ -12,7 +12,7 @@ from ta.trend import EMAIndicator, MACD
 from ta.momentum import RSIIndicator
 import joblib
 
-symbol = "EOSUSDT"
+symbol = "BTCUSDT"
 
 # === Carrega dados ===
 df_1h = pd.DataFrame(list(db.candles_1h.find({"symbol": symbol}).sort("open_time", 1)))
