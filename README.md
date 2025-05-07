@@ -63,7 +63,7 @@ O script irá:
 Execute o script `test_model.py`:
 
 ```bash
-python test_model.py
+python test/test_model.py
 ```
 
 O script irá:
@@ -91,30 +91,12 @@ Instale as dependências:
 pip install -r requirements.txt
 ```
 
-Ou, se preferir, instale manualmente:
-
-```bash
-pip install pandas numpy matplotlib scikit-learn ta xgboost pymongo joblib python-dotenv
-```
-
-## 🔐 Configuração do MongoDB
-
-Crie um arquivo `mongo.py` com o seguinte conteúdo:
-
-```python
-from pymongo import MongoClient
-
-MONGO_URI = "mongodb+srv://usuario:senha@seu-cluster.mongodb.net/"
-client = MongoClient(MONGO_URI)
-db = client["ia"]
-```
-
 ## ✅ Exemplo de Output
 
 ```text
-🔮 Previsão para o próximo movimento do mercado:
-📈 SUBIR
-📊 Confiança: 83.45%
+Previsão para o próximo movimento do mercado:
+SUBIR
+Confiança: 83.45%
 ```
 
 ## 📌 Observações
