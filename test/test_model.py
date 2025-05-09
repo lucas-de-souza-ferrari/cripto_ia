@@ -98,13 +98,12 @@ def prepare_input(df_1h, df_4h):
     return np.array([features], dtype="float32")
 
 
-def predict_direction(symbol="EOSUSDT"):
+def predict_direction(symbol="HIFIUSDT"):
     df_1h = fetch_binance_candles(symbol, "1h")
     df_4h = fetch_binance_candles(symbol, "4h")
     df_1h = add_indicators(df_1h)
 
     features = prepare_input(df_1h, df_4h)
-
     model = joblib.load(f"model/modelo_xgb_{symbol}.pkl")
     scaler = joblib.load(f"scaler/scaler_xgb_{symbol}.pkl")
     features_scaled = scaler.transform(features)

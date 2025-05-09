@@ -13,10 +13,10 @@ from ta.volatility import AverageTrueRange
 from xgboost import XGBClassifier
 
 # === Parâmetros do modelo ===
-symbol = "EOSUSDT"
+symbol = "HIFIUSDT"
 window_1h = 20
 window_4h = 20
-future_window = 7
+future_window = 3
 take_profit_pct = 0.015
 stop_loss_pct = 0.015
 
@@ -137,13 +137,15 @@ X_scaled = scaler.fit_transform(X)
 
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, stratify=y, random_state=42)
 
+print(f"Tamanho do treino: {X_train.shape[0]} amostras")
+print(f"Tamanho do teste:  {X_test.shape[0]} amostras")
+
 xgb = XGBClassifier(
     n_estimators=200,
     learning_rate=0.05,
     max_depth=6,
     subsample=0.8,
     colsample_bytree=0.8,
-    use_label_encoder=False,
     eval_metric="logloss",
     random_state=42,
 )
